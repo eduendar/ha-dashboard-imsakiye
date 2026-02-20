@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import ezanAudio from '../assets/ezan.mp3';
 
 export default function IftarCountdown({ iftarTime, today }) {
     const [timeLeft, setTimeLeft] = useState(null);
@@ -78,10 +79,10 @@ export default function IftarCountdown({ iftarTime, today }) {
                 aria-label="Test Ezan Sound"
             ></button>
 
-            {/* Audio Element with a famous Adhan */}
+            {/* Audio Element with a local Adhan */}
             <audio
                 ref={audioRef}
-                src="/ezan.mp3"
+                src={ezanAudio}
                 preload="auto"
             ></audio>
             <div className="countdown-label">Countdown bis zum</div>
